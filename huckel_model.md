@@ -4,7 +4,7 @@
 
 The `huckle_method.py` module provides implementations of the classical and extended versions of the Huckel method for analyzing the electronic structure of planar, pi-conjugated molecules. This module aims to compute and visualize eigenvalues and eigenvectors, offering users valuable insights into molecular orbitals and electronic properties.
 
-## Introduction to the Huckel Method
+## Introduction to the [Hückel Method](https://daniloroccatano.blog/2018/05/23/the-simple-huckel-method/)
 
 The Huckel method, named after Erich Hückel, is a powerful computational approach used to study the electronic structure of conjugated organic molecules. It provides approximate solutions to the Schrödinger equation for pi-electron systems, focusing on planar molecules with delocalized pi-electrons. The method is based on the tight-binding approximation and involves parameters such as the on-site energy (alfa) and the interaction between neighboring atoms (beta). By solving the Huckel matrix, which represents the system's Hamiltonian, the method yields eigenvalues and eigenvectors corresponding to molecular orbitals and their energies.
 
@@ -36,7 +36,7 @@ The `huckle_method.py` module relies on the following libraries:
 - `orbital_graph(orbital, state)`: Creates a graph for the selected orbital.
 - `huckel_orbitals()`: Plots selected molecular orbitals around the Fermi energy.
 - `return_gap_value()`: Calculates the energy difference between the highest occupied and lowest unoccupied orbital.
-- `bond_charge_matrix_txt()`: Saves the bond charge matrix to a text file.
+- `bond_charge_matrix_txt()`: Saves the [bond charge](https://www.chm.bris.ac.uk/pt/ajm/html/L4_p2.htm) matrix to a text file. Bond charge - in this context - is a quantity, that measures a strenght of pi-bond between two atoms.
 - `graph_bond_charge()`: Generates a visualization of the bond charge matrix.
 
 ## Time Characteristics Analysis
