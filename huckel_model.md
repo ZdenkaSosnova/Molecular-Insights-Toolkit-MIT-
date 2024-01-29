@@ -36,7 +36,8 @@ The `huckle_method.py` module relies on the following libraries:
 - `orbital_graph(orbital, state)`: Creates a graph for the selected orbital.
 - `huckel_orbitals()`: Plots selected molecular orbitals around the Fermi energy.
 - `return_gap_value()`: Calculates the energy difference between the highest occupied and lowest unoccupied orbital.
-- `bond_charge_matrix_txt()`: Saves the [bond charge](https://www.chm.bris.ac.uk/pt/ajm/html/L4_p2.htm) matrix to a text file. Bond charge - in this context - is a quantity, that measures a strenght of pi-bond between two atoms.
+- `bond_charge()`:bond_charge(): This function calculates the bond charge, which measures the strength of a pi-bond between any two atoms (i,j) in two molecules. For further analysis, only the strength of bonds between nearest neighbor atoms is considered. You can learn more about bond charge [here](https://www.chm.bris.ac.uk/pt/ajm/html/L4_p2.htm).
+- `bond_charge_matrix_txt()`: Saves the matrix to a text file. 
 - `graph_bond_charge()`: Generates a visualization of the bond charge matrix.
 
 ## Time Characteristics Analysis
