@@ -39,7 +39,10 @@ The `huckle_method.py` module relies on the following libraries:
 - `bond_charge_matrix_txt()`: Saves the bond charge matrix to a text file.
 - `graph_bond_charge()`: Generates a visualization of the bond charge matrix.
 
-##Time Characteristics Analysis
-An additional analysis was conducted to assess the computational time required for molecules ranging from a number of atoms to 2000. All of these times were found to be lower than a linear function 0.004x + 0.002, where x represents the number of atoms. It's important to note that this analysis is dependent on the user's computer and was conducted for a specific setting including plotting energy graphs, using non-extended Huckel method, and plotting 4 molecular orbitals. The purpose of this analysis is to provide users with an idea of the computational time range, given the square matrices' shape defined by the number of atoms.
+## Time Characteristics Analysis
+
+An additional analysis was conducted to assess the computational time required for molecules ranging from a number of atoms to 2000. All of these times were found to be lower than a linear function 0.004x + 0.002, where x represents the number of atoms. It's important to note that this analysis is dependent on the user's computer and was conducted for a specific setting including plotting energy graphs and plotting 4 molecular orbitals. The purpose of this analysis is to provide users with an idea of the computational time range, given the square matrices' shape defined by the number of atoms.
+![Graph of "time analysis"]([https://link.to/your/image.png](https://www.dropbox.com/scl/fi/tkj81q0vp6jjntjjvck8n/time_char.png?rlkey=voupzc0itgzooyftrucj8se7m&dl=0)https://www.dropbox.com/scl/fi/tkj81q0vp6jjntjjvck8n/time_char.png?rlkey=voupzc0itgzooyftrucj8se7m&dl=0)
+
 
 
