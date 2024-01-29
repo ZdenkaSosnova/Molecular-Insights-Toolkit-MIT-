@@ -42,7 +42,8 @@ The `huckle_method.py` module relies on the following libraries:
 ## Time Characteristics Analysis
 
 An additional analysis was conducted to assess the computational time required for molecules ranging from a number of atoms to 2000. All of these times were found to be lower than a linear function 0.004x + 0.002, where x represents the number of atoms. It's important to note that this analysis is dependent on the user's computer and was conducted for a specific setting including plotting energy graphs and plotting 4 molecular orbitals. The purpose of this analysis is to provide users with an idea of the computational time range, given the square matrices' shape defined by the number of atoms.
-![Graph of "time analysis"](https://www.dropbox.com/scl/fi/tkj81q0vp6jjntjjvck8n/time_char.png?rlkey=voupzc0itgzooyftrucj8se7m&dl=0)
+![Graph of "time analysis"](https://previews.dropbox.com/p/thumb/ACJWoYplvAcxCgwO2aGuIYqcvumkjPwhSh0l58x84UikyANrSOOctmEnszeBRXiUjuojm9mbIHe1n_U-p2zlh1qm3vl8sc8m-erGJfxK_XckPvXZBSoHea_B50e4knOFSDt1pfKq3RMwMO3Ty4GY3fmoi8K2NPHFJBjodV1XlgAcaVfgSaB74VCHnwxz17V_As3_UItPNo6bmM07Tmmp9uld8O8PX54HTmpNOntLr8aGvbKqys68ISVhA6v3F9N7DgUWu2aH_rHksH7AtPtpQA5qm3VwJZQng1ACQmNlGI9rZtSle6ZaNKsuIHCMxTLyhVroODcgliiAV66jgYitQLXl/p.png)
+
 
 
 
