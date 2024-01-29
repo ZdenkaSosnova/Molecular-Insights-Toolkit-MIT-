@@ -1,6 +1,6 @@
 # Molecular-Insight_Toolkit (MIT)
 
-Welcome to the Molecular-Insight_Toolkit (MIT) - a Python library designed to provide insightful analysis and visualization of organic molecular structures. MIT offers a range of classes and functions meticulously crafted to simplify the exploration of structural and electronic properties, making it an invaluable tool for students, researchers, and professionals alike.
+Welcome to the Molecular-Insight_Toolkit (MIT) - a Python library meticulously designed to provide insightful analysis and visualization of organic molecular structures. MIT offers a range of classes and functions meticulously crafted to simplify the exploration of structural and electronic properties, making it an invaluable tool. Whether you're delving into the basics of organic chemistry or navigating advanced molecular analysis, MIT is your indispensable companion on the journey to mastering molecular insights, especially for students seeking clarity and ease in their studies.
 
 ## Key Features
 
