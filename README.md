@@ -7,7 +7,7 @@ Welcome to the Molecular-Insight_Toolkit (MIT) - a Python library meticulously d
 ### [1. Huckel Method Implementation](huckel_model.md)
 MIT incorporates classical and extended versions of the Huckel method, a powerful computational approach for analyzing the electronic structure of planar, pi-conjugated molecules. The Huckel classes facilitate the computation and visualization of eigenvalues and eigenvectors, providing users with valuable insights into molecular orbitals and electronic properties.
 
-### 2. Bond Length Analyzer
+### [2. Bond Length Analyzer](bond_length_analyzer.md)
 With MIT's bond length analyzer, users can effortlessly analyze molecular structures stored in XYZ file format. Utilizing intuitive color mapping techniques, the analyzer generates visually informative plots highlighting variations in bond lengths, aiding in the identification of structural features and molecular dynamics.
 
 ### 3. Molecule Constructor
