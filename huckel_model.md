@@ -8,18 +8,14 @@ The `huckle_method.py` module provides implementations of the classical and exte
 
 The Huckel method, named after Erich Hückel, is a powerful computational approach used to study the electronic structure of conjugated organic molecules. It provides approximate solutions to the Schrödinger equation for pi-electron systems, focusing on planar molecules with delocalized pi-electrons. The method is based on the tight-binding approximation and involves parameters such as the on-site energy (alfa) and the interaction between neighboring atoms (beta). By solving the Huckel matrix, which represents the system's Hamiltonian, the method yields eigenvalues and eigenvectors corresponding to molecular orbitals and their energies.
 
-### Usage
 
-#### Installation and Necessary Libraries
+### Installation and Necessary Libraries
 
 Ensure you have Python 3.x installed.
 The `huckle_method.py` module relies on the following libraries:
 - **matplotlib**: Used for plotting graphs and visualizing molecular orbitals.
 - **numpy**: Essential for numerical calculations and matrix operations.
 - **scipy**: Utilized for advanced scientific computing tasks such as solving eigenvalue problems.
-
-#### Importing the Class
-
 
 ## Methods of the Class
 
