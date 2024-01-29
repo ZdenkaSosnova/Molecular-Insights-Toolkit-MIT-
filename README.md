@@ -10,7 +10,7 @@ MIT incorporates classical and extended versions of the Huckel method, a powerfu
 ### [2. Bond Length Analyzer](bond_length_analyzer.md)
 With MIT's bond length analyzer, users can effortlessly analyze molecular structures stored in XYZ file format. Utilizing intuitive color mapping techniques, the analyzer generates visually informative plots highlighting variations in bond lengths, aiding in the identification of structural features and molecular dynamics.
 
-### 3. Molecule Constructor
+### [3. Molecule Constructor](molecule_constructor.md)
 MIT's molecule constructor empowers users to generate specific types of planar molecules effortlessly, providing coordinates in XYZ file format. By integrating graph theory principles, the constructor offers a systematic approach to molecule design and exploration, enabling users to generate molecular structures with precision and ease.
 
 ### 4. Example Repository (examples.py)
