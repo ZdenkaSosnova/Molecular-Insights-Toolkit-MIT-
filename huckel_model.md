@@ -10,14 +10,10 @@ The Huckel method, named after Erich Hückel, is a powerful computational approa
 
 ### Usage
 
-#### Installation
+#### Installation and Necessary Libraries
 
 Ensure you have Python 3.x installed.
-
-## Necessary Libraries
-
 The `huckle_method.py` module relies on the following libraries:
-
 - **matplotlib**: Used for plotting graphs and visualizing molecular orbitals.
 - **numpy**: Essential for numerical calculations and matrix operations.
 - **scipy**: Utilized for advanced scientific computing tasks such as solving eigenvalue problems.
