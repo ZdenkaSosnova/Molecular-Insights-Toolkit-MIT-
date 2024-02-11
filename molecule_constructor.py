@@ -31,7 +31,7 @@ class Molecule_constructor:
         :return: tuple: Minimum and maximum distance
         '''
         lengths = [dictionary[element][0] for element in dictionary] + [dictionary[element][1] for element in dictionary] + [length_1, length_2]
-        return np.min(lengths) - 0.1, np.max(lengths) - 0.1
+        return np.min(lengths) - 0.1, np.max(lengths) + 0.1
 
 
     @staticmethod
@@ -40,7 +40,10 @@ class Molecule_constructor:
         Creates a database of elementary cells
         :return: tuple: Elementary cells database and distance dictionary
         '''
-
+        if not isinstance(benzene_count,int):
+            raise ValueError("Incorectly defined variable number of rings.")
+        if benzene_count % 2 == 0 or benzene_count <= 0:
+            raise ValueError("Incorectly defined variable number of rings.")
         only_one_cell = [x for x in range(repetition_count)]
         database = {}
         period_dictionary = {}
@@ -64,6 +67,8 @@ class Molecule_constructor:
         for element in dictionary:
             if isinstance(dictionary[element], list):
                 if len(dictionary[element]) == 4 and isinstance(dictionary[element][0], (int, float)) and isinstance(dictionary[element][1], (int,float)) and isinstance(dictionary[element][2],int) and isinstance(dictionary[element][3],list):
+                    if dictionary[element][2] % 2 == 0:
+                        raise ValueError(f"Incorrectly defined variable corresponding to the key {element}.")
                     for j in range(len(dictionary[element][3])):
                         if not isinstance(dictionary[element][3][j], int):
                             raise ValueError(f"Incorrectly defined variable corresponding to the key {element}.")
@@ -71,7 +76,7 @@ class Molecule_constructor:
                     raise ValueError(f"Incorrectly defined variable corresponding to the key {element}.")
             else:
                 raise ValueError(f"Incorrectly defined variable corresponding to the key {element}.")
-
+            dictionary[element][3] = [i-1 for i in dictionary[element][3]]
         overlapping_check_lists = [dictionary[element][3][i] for element in dictionary for i in range(len(dictionary[element][3]))]
         overlapping_value_check_lists = [i for i in overlapping_check_lists if i < repetition_count + 1 and i >= 0]
         if not len(set(overlapping_check_lists)) == len(overlapping_check_lists):
@@ -174,7 +179,7 @@ class Molecule_constructor:
         fig = plt.figure(figsize=(aspect_ratio, 1.5))
         axes1 = fig.add_axes([0.0, 0.0, 0.9, 1])
         cmap = cm.get_cmap('cool')
-        norm = plt.Normalize(vmin=round(self.v_min, 1), vmax=round(self.v_max, 1))
+        norm = plt.Normalize(vmin=round(self.v_min, 2), vmax=round(self.v_max, 2))
         length = len(self.my_molecule)
         for i in range(length):
             for k in range(i + 1, length):
@@ -194,6 +199,3 @@ class Molecule_constructor:
         axes1.axis('off')
         fig.savefig(f"{self.file_name}.png", dpi=300)
         plt.show()
-
-
-
