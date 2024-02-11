@@ -32,10 +32,8 @@ from Molecule_constructor import Molecule_constructor
 
 # Create a Molecule_constructor instance with specified parameters
 my_molecule = Molecule_constructor(length_inside = 1.23, length_between = 1.51, number_of_benzene_rings = 3,
-repetition_count = 12, file_name = "molecule",
-cell1=[1.25, 1.42, 5, [3,10]],
-cell2=[1.33, 1.21, 9, [8]],
-cell3=[1.55, 1.32, 1, [4]])
+                                   repetition_count = 12, file_name = "molecule", cell1=[1.25, 1.42, 5, [3,10]],
+                                   cell2=[1.33, 1.21, 9, [8]], cell3=[1.55, 1.32, 1, [4]])
 
 # Plot the molecule
 my_molecule.show_graph()
