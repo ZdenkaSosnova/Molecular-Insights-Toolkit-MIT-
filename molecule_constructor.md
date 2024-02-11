@@ -39,12 +39,6 @@ my_molecule = Molecule_constructor(length_inside = 1.23, length_between = 1.51, 
 my_molecule.show_graph()
 
 ```
-### Example's molecule graph
-<p align="center">
-  <img src="[https://previews.dropbox.com/p/thumb/ACL6tooIghbjyBkjIFMIxMaKJI-fXvmCn_ndmCUWjWTvF048b7or5Dmf4T7jjHzrfOTADcGnYApMQvfCK1tDC1IEMdYeI-56Y8zgC1XN2dW78OGzU8eN9irTZHNnNLireJyiNNoPN-8ejOx390kv-Az2PRwIC8bc6wQDNlDeQV06MDfn9JZQwrPebBNPTiW62NmuYR7lPaWJ0cuaBeBzen8pHh8sXZNaIe_VdfgwPr2QOiebfiWWezC6qqI019Mkfk6V1qQUGCXYn2l_ZHa5HqlYuD2_eSqZ1YjmPkIj3udusVZtMzKsrSMass3UvHlLUNp4v2ks8RWsIFARcCO9ZcMk/p.png](https://www.dropbox.com/scl/fi/rgjam0fklx3i8yursrmig/mocule-example.png?oref=e&r=ACHn6lNRDH8MqzjOuHZxaFuCMPLMHiR1cgz7FbWIz7KSR4GLBk-pZGw7FjvkDKKdyuubMsVdkfUhW8RZgJOuBM_z-c9uj8y8-rJSdAtOLYdBpVpCC6Ff2a7XpjPnhvLXesDlFvnwGKQuqXAb7Kt1Uw2QtkH3j0n7ehMNr0nVI401viynG-7JiYX69fb0KfLQ50Y&sm=1&dl=0)" alt="Graph Title">
-</p>
-
-
 
 ## Exciting Possibilities
 With the `Molecule_constructor` class, users can unleash their creativity in molecular design and exploration. Whether simulating novel organic compounds or studying crystal structures, this class offers a powerful tool for advancing research and education in chemistry and materials science. From simple organic molecules to intricate polymers, the possibilities are endless with the Molecular-Insight_Toolkit.
