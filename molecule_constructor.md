@@ -36,8 +36,8 @@ my_molecule = Molecule_constructor(length_inside = 1.23, length_between = 1.51, 
 # Plot the molecule
 my_molecule.show_graph()
 
-## Understanding Molecular Construction
-The `Molecule_constructor` class enables users to create custom molecular structures with precision and flexibility. By specifying parameters such as bond lengths, benzene ring count, and repetition count, researchers and students can generate complex molecular configurations for various applications. Understanding molecular construction is essential for exploring the relationship between molecular geometry and chemical properties.
+```
+### Example's molecule graph
 
 ## Exciting Possibilities
 With the `Molecule_constructor` class, users can unleash their creativity in molecular design and exploration. Whether simulating novel organic compounds or studying crystal structures, this class offers a powerful tool for advancing research and education in chemistry and materials science. From simple organic molecules to intricate polymers, the possibilities are endless with the Molecular-Insight_Toolkit.
