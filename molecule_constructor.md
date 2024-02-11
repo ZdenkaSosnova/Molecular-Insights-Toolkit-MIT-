@@ -1,7 +1,7 @@
 # Molecule Constructor
 
 ## Overview
-The `Molecule_constructor` class in the Molecular-Insight_Toolkit (MIT) Python library facilitates the construction of molecular structures by generating Cartesian coordinates based on specified parameters. This class is particularly useful for creating custom molecular configurations with precise control over bond lengths and arrangement.
+The `Molecule_constructor` class in the Molecular-Insight_Toolkit (MIT) Python library facilitates the construction of molecular structures by generating Cartesian coordinates based on specified parameters. This class is particularly useful for creating custom molecular configurations with precise control over bond lengths and arrangement. 
 
 ## Installation and Necessary Libraries
 Before using the `Molecule_constructor` class, ensure you have installed the following Python libraries:
@@ -17,6 +17,24 @@ The `Molecule_constructor` class provides the following methods:
 2. **`molecule_coordinates_to_xyz_file()`**: Writes the Cartesian coordinates of the generated molecule into a .xyz file format.
 
 3. **`show_graph()`**: Displays a graph of the constructed molecule, visualizing bond lengths using different colors.
+
+### Specific Molecules
+The `Molecule_constructor` is optimized for creating molecules with the following characteristics:
+- Only odd numbers of benzene rings per unit cell are supported.
+- Any value of inside or between length can be specified.
+- The generated `.xyz` file will only consist of carbon atoms (without hydrogen atoms).
+
+## Example
+Here's an example of how to use the `Molecule_constructor` class to generate a specific molecule:
+
+```python
+from Molecule_constructor import Molecule_constructor
+
+# Create a Molecule_constructor instance with specified parameters
+my_molecule = Molecule_constructor(length_inside = 1.23, length_between = 1.51, number_of_benzene_rings = 3, repetition_count = 12, file_name = "molecule", cell1=[1.25, 1.42, 5, [3,10]], cell2=[1.33, 1.21, 9, [8]], cell3=[1.55, 1.32, 1, [4]])
+
+# Plot the molecule
+my_molecule.show_graph()
 
 ## Understanding Molecular Construction
 The `Molecule_constructor` class enables users to create custom molecular structures with precision and flexibility. By specifying parameters such as bond lengths, benzene ring count, and repetition count, researchers and students can generate complex molecular configurations for various applications. Understanding molecular construction is essential for exploring the relationship between molecular geometry and chemical properties.
