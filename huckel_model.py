@@ -38,11 +38,11 @@ class Huckel_model:
         check_input_validity(extended_huckel, "extenden_huckel", (bool))
         self.file_name = file
         self.molecule_coordinates = load_coordinates(file, carbon_only= True)
-        self.rozmer = len(self.molecule_coordinates)
+        self.dimension = len(self.molecule_coordinates)
         self.number_of_states = number_of_states
         self.distance = distance_matrix(self.molecule_coordinates)
         self.eigenvalues, self.eigenvectors = self.create_hamiltonian(alfa, beta, extended_huckel, minimal_distance, maximal_distance)
-        self.state_names = Huckel.state_list(self.rozmer)
+        self.state_names = Huckel_model.state_list(self.dimension)
         self.v_min = minimal_distance
         self.v_max = maximal_distance
 
@@ -85,7 +85,7 @@ class Huckel_model:
         '''
         Size of Hamiltonian - square matrix, size corresponds to the number of carbon atoms
         '''
-        hamiltonian = np.zeros(self.rozmer**2).reshape(self.rozmer, self.rozmer)
+        hamiltonian = np.zeros(self.dimension**2).reshape(self.dimension, self.dimension)
         condition_1 = self.distance == 0
         hamiltonian[condition_1] = alfa
         condition_2 = (self.distance >= minimal_value) & (self.distance <= maximal_value)
@@ -111,7 +111,7 @@ class Huckel_model:
         plt.legend()
         plt.xlabel("Stavy")
         plt.ylabel("Energie [eV]")
-        fig.savefig(f"{self.file_name.split('.')[0]}_energy.png")
+        plt.savefig(f"{self.file_name.split('.')[0]}_energy.png")
         plt.show()
 
     def orbital_graph(self, orbital, state):
@@ -134,8 +134,8 @@ class Huckel_model:
             marker_size = 100
         fig = plt.figure(figsize = (aspect_ratio,1.5))
         ax = fig.add_axes((0.0, 0.0, 1, 1))
-        for i in range(self.rozmer):
-            for j in range(i+1,self.rozmer):
+        for i in range(self.dimension):
+            for j in range(i+1,self.dimension):
                 if self.distance[i][j] < 1.7:
                     ax.plot([self.molecule_coordinates[:,0][i], self.molecule_coordinates[:,0][j]],[self.molecule_coordinates[:,1][i],self.molecule_coordinates[:,1][j]],"grey")
         for k in range(len(orbital)):
@@ -209,10 +209,7 @@ class Huckel_model:
         sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
         sm.set_array([])
         cax = fig.add_axes([0.8, 0.2, 0.03, 0.6])
-        colorbar = plt.colorbar(sm, label='Délka vazby', cax=cax)
+        colorbar = plt.colorbar(sm, label='Strength', cax=cax)
         colorbar.ax.tick_params(axis='y', labelsize=10)
         fig.savefig(f"{self.file_name.split('.')[0]}_bond_charge.png", dpi=500)
         fig.show()
-
-
-
