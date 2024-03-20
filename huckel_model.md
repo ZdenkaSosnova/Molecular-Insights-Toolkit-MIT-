@@ -40,15 +40,21 @@ Before using the `Huckel model` class, ensure you have installed the following P
 - `bond_charge_matrix_txt()`: Saves the matrix to a text file. 
 - `graph_bond_charge()`: Generates a visualization of the bond charge matrix.
 
-## Time Characteristics Analysis
+## Example
+Here's an example of how to use the `Huckel model` class to generate a specific molecule:
 
-An additional analysis was conducted to assess the computational time required for molecules ranging from a number of atoms to 2000. All of these times were found to be lower than a linear function 0.004x + 0.002, where x represents the number of atoms. It's important to note that this analysis is dependent on the user's computer and was conducted for a specific setting including plotting energy graphs and plotting 4 molecular orbitals. The purpose of this analysis is to provide users with an idea of the computational time range, given the square matrices' shape defined by the number of atoms.
-<p align="center">
-  <img src="https://ucbcee984ddbed20fe99af091fc7.previews.dropboxusercontent.com/p/thumb/ACLtGvnpA278zUZSA3wh9lcxVaGmM1RzxW27cWErVPeL0MjGSuM7Fc_4Nu0VbIKLR79mdrIDZQ6NSeg2F_u34yovyX6I5igSyrRUBrhU3FgJAE0tNs-zz5JBxftgn1AvS9ukqyR1wTQ4Vej-RWA3WbauyanWjiAkB4imdwByqpDWw6eIJ1n-7pMGpANlzQg86frK8zYrK-_NarxuuukyAu-zIbh4sdRNP3DgjXnPZHmkEBpkOKHSpEFRcWZ8G0pZri2B69WYM2bmA1IiYWxBRxDD0lXwjfTvx3_KbopvQeSPZ31Jo20QIfBXMSGrGcXq1vbyWHMOD6Nd3qpwpWmFBpodC8T_gaB0V_VSxkq4QfnOdV4vb7trcuG0TdXYMd2Gd1Y/p.png" alt="Graph Title">
-</p>
+```python
+from molecule_constructor import Molecule_constructor
+from huckel_model import Huckel_model
 
+# Create file "molecule.txt"
+my_molecule = Molecule_constructor(length_inside = 1.25, length_between = 1.55, number_of_benzene_rings = 5,
+                                   repetition_count = 10, file_name = "molecule" )
+my_molecule.molecule_coordinates_to_xyz_file()
 
-
-
+# Calculate eigenvectors and eigenstates of the molecule
+model = Huckel_model(file = "molecule.xyz", alfa = 0, beta = -2.8, extended_huckel = False, number_of_states = 4, minimal_distance = 1.20, maximal_distance = 1.60)
+model.energy_graph()
+model.huckel_orbitaly()
 
 
