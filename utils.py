@@ -85,8 +85,6 @@ def load_coordinates(file, carbon_only):
     try:
         with open(file, "r") as f:
             for line in f:
-                print(i)
-                print(line)
                 if not carbon_only:
                     for element in periodic_table:
                         if element in line:
