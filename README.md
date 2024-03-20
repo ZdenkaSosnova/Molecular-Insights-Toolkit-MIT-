@@ -13,9 +13,6 @@ With MIT's bond length analyzer, users can effortlessly analyze molecular struct
 ### [3. Molecule Constructor](molecule_constructor.md)
 MIT's molecule constructor empowers users to generate specific types of planar molecules effortlessly, providing coordinates in XYZ file format. By integrating graph theory principles, the constructor offers a systematic approach to molecule design and exploration, enabling users to generate molecular structures with precision and ease.
 
-### [4. Example Repository (examples.py)](example_repository.md)
-Explore MIT's dedicated example repository to gain hands-on experience with the toolkit's capabilities. Through illustrative examples, users can delve into the physical significance of MIT's functionalities, gaining a deeper understanding of molecular properties and behaviors.
-
 ## Why MIT?
 
 - **Simplicity Meets Functionality:** MIT simplifies complex computational tasks, allowing users to focus on analyzing molecular structures and properties without unnecessary complexity.
